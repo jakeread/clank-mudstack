@@ -57,6 +57,10 @@ Getting clay into the tube is as straightforward as you want it to be: roll up a
 
 To get the piston into the machine, the ball screw (shiny metal thing sticking out of the plunger) can be turned by hand - either via the pulley or directly. The extruder motor can be turned on and off separately from other motors with the `switch E pwr` button on the lower left of the interface. Lift the ballscrew to its top position and shimmy the piston in, then screw the ballscrew down by hand until some clay comes out of the nozzle and turn the E motor power back on. 
 
+### The Print Surface
+
+You can print onto anything. There are two aluminum beds that locate in the machine with a "kinematic mount" that can be used, or a simple batt or plywood plate can be placed in the machine's floor. We have also thrown bases and printed walls onto them, to mix practice. Mess around and find out. 
+
 ### Finding Z Zero
 
 Once the machine is setup and homed, and clay is in the tube, you can set the reference plane for the job. To do this, the interface has a jogging feature. Click the big button that says `click in to jog` and your arrow keys will bump the machine around. To make bigger steps, hold down `x` and to move the z-axis, hold down `z` on your keyboard. Try to avoid squishing the z-axis into the bed. 
