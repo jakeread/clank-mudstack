@@ -18,54 +18,54 @@ float c_scale = 0.00F;
 
 // -------------------------------------------------------- AXIS PICK EP 
 
-boolean onAxisPickData(uint8_t* data, uint16_t len){
+EP_ONDATA_RESPONSES onAxisPickData(uint8_t* data, uint16_t len){
   if(data[0] > 3){
     axis_pick = 0;
   } else {
     axis_pick = data[0];
   }
-  return true;
+  return EP_ONDATA_ACCEPT;
 }
 
 vertex_t* axisPickEp = osapBuildEndpoint("axisPick", onAxisPickData, nullptr);
 
 // -------------------------------------------------------- AXIS INVERSION EP
 
-boolean onAxisInvertData(uint8_t* data, uint16_t len){
+EP_ONDATA_RESPONSES onAxisInvertData(uint8_t* data, uint16_t len){
   if(data[0] > 0){
     stepper_hw->setInversion(true);
   } else {
     stepper_hw->setInversion(false);
   }
-  return true;
+  return EP_ONDATA_ACCEPT;
 }
 
 vertex_t* axisInvertEp = osapBuildEndpoint("axisInvert", onAxisInvertData, nullptr);
 
 // -------------------------------------------------------- MICROSTEP EP 
 
-boolean onMicrostepData(uint8_t* data, uint16_t len){
+EP_ONDATA_RESPONSES onMicrostepData(uint8_t* data, uint16_t len){
   stepper_hw->setMicrostep(data[0]);
-  return true;
+  return EP_ONDATA_ACCEPT;
 }
 
 vertex_t* microstepEp = osapBuildEndpoint("microstep", onMicrostepData, nullptr);
 
 // -------------------------------------------------------- SPU EP
 
-boolean onSPUData(uint8_t* data, uint16_t len){
+EP_ONDATA_RESPONSES onSPUData(uint8_t* data, uint16_t len){
   chunk_float32 spuc = { .bytes = { data[0], data[1], data[2], data[3] } };
   old_spu = spu;
   spu = fabsf(spuc.f);
   spu_was_set = true;
-  return true;
+  return EP_ONDATA_ACCEPT;
 }
 
 vertex_t* spuEp = osapBuildEndpoint("SPU", onSPUData, nullptr);
 
 // -------------------------------------------------------- CSCALE DATA
 
-boolean onCScaleData(uint8_t* data, uint16_t len){
+EP_ONDATA_RESPONSES onCScaleData(uint8_t* data, uint16_t len){
   chunk_float32 cscalec = { .bytes = { data[0], data[1], data[2], data[3] } };
   if(cscalec.f > 1.0F){
     cscalec.f = 1.0F;
@@ -73,7 +73,7 @@ boolean onCScaleData(uint8_t* data, uint16_t len){
     cscalec.f = 0.0F;
   }
   stepper_hw->setCurrent(cscalec.f);
-  return true;
+  return EP_ONDATA_ACCEPT;
 }
 
 vertex_t* cScaleEp = osapBuildEndpoint("CScale", onCScaleData, nullptr);
@@ -93,7 +93,7 @@ float homePosRate = 0.0F;     // rate (units/tick)
 boolean homeDir = false;      // direction 
 float homeOffset = 0.0F;      // after-home offset 
 
-boolean onHomeData(uint8_t* data, uint16_t len){
+EP_ONDATA_RESPONSES onHomeData(uint8_t* data, uint16_t len){
   chunk_float32 rate = { .bytes = { data[0], data[1], data[2], data[3] } };
   chunk_float32 offset = { .bytes = { data[4], data[5], data[6], data[7] } };
   homing = HOME_FIRST;
@@ -108,7 +108,7 @@ boolean onHomeData(uint8_t* data, uint16_t len){
   homeStepRate = abs(rate.f * spu) / TICKS_PER_SECOND;
   homePosRate = abs(rate.f) / TICKS_PER_SECOND;
   homeOffset = offset.f;
-  return true;
+  return EP_ONDATA_ACCEPT;
 }
 
 vertex_t* homeEp = osapBuildEndpoint("Home", onHomeData, nullptr);

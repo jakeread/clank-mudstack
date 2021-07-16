@@ -32,8 +32,6 @@ import TempPanel from '../osapjs/client/components/tempPanel.js'
 import TempVM from './vms/tempVirtualMachine.js'
 import LoadVM from './vms/loadcellVirtualMachine.js'
 import LoadPanel from '../osapjs/client/components/loadPanel.js'
-import FilamentExperiment from '../client/components/filamentExperiment.js'
-import StiffnessMapper from '../client/components/bedStiffnessMapper.js'
 import MotorVM from './vms/motorVirtualMachine.js'
 
 console.log("hello clank controller")
