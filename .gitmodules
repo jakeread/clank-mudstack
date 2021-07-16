@@ -1,0 +1,9 @@
+[submodule "controller/osapjs"]
+	path = controller/osapjs
+	url = ssh://git@gitlab.cba.mit.edu:846/jakeread/osapjs.git
+[submodule "firmware/motion-head/src/osape-d51"]
+	path = firmware/motion-head/src/osape-d51
+	url = ssh://git@gitlab.cba.mit.edu:846/jakeread/osape-d51.git
+[submodule "firmware/stepper-drop/src/osape-d51"]
+	path = firmware/stepper-drop/src/osape-d51
+	url = ssh://git@gitlab.cba.mit.edu:846/jakeread/osape-d51.git

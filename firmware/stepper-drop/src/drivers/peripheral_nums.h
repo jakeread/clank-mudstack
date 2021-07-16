@@ -1,0 +1,18 @@
+#ifndef PERIPHERAL_NUMS_H_
+#define PERIPHERAL_NUMS_H_
+
+#define PERIPHERAL_A 0
+#define PERIPHERAL_B 1
+#define PERIPHERAL_C 2
+#define PERIPHERAL_D 3
+#define PERIPHERAL_E 4
+#define PERIPHERAL_F 5
+#define PERIPHERAL_G 6
+#define PERIPHERAL_H 7
+#define PERIPHERAL_I 8
+#define PERIPHERAL_K 9
+#define PERIPHERAL_L 10
+#define PERIPHERAL_M 11
+#define PERIPHERAL_N 12
+
+#endif 
