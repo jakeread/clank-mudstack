@@ -1,8 +1,8 @@
 # Clank w/ Mudstick Extruder
 
-![img](header)
+![img](log/2021-07_clank-mudstack-5.jpg)
 
-The [clank](mtmlink) project is an ongoing effort at the MIT Center for Bits and Atoms to produce a small scale modular machine platform to make "almost anything" using a wide variety of tools (end effectors) on a common motion platform.
+The [clank](https://fab.cba.mit.edu/classes/865.21/people/jakeread/fxy/) project is an ongoing effort at the MIT Center for Bits and Atoms to produce a small scale modular machine platform to make "almost anything" using a wide variety of tools (end effectors) on a common motion platform.
 
 You've found the documentation for an instance of this project that lives at the [Haystack Mountain School of Crafts](https://www.haystack-mtn.org/) in the ceramics studio, and uses a plunger / extruder to produce ceramic artefacts. 
 
@@ -14,7 +14,7 @@ This repository contains:
 
 For assistance or to troubleshooting, please read the repository thoroughly first. If your issue persists, please start an issue here - I will try to respond to your queries. 
 
-... video (!) 
+![clay-video](log/2021-07_haystack-edit-enc.mp4)
 
 ## Preparing Files for Clank-MS
 
@@ -79,4 +79,23 @@ Now you can run the job: hit `browse` and load a gcode file prepared above. Clic
 
 ## Previous Results 
 
-... to be uploaded shortly 
+Our first test piece:
+
+![clay](log/2021-07_clank-mudstack-7.jpg)
+
+These were designed by extracting a waveform from an audio recording of a gong hit, wrapped around a cylinder in Rhino / Grasshopper, w/ Amira Abdel-Rahman and Matt Crane:
+
+![clay](log/2021-07_clank-mudstack-14.jpg)
+![clay](log/2021-07_clank-mudstack-6.jpg)
+
+For this piece, and those below, we used a porcelain clay body with three mason stains added, each color extruded alongside one another a-la "aquafresh" toothpaste. The layering can be trimmed back... here, patterns were added by hand:
+
+![clay](log/2021-07_clank-mudstack-8.jpg)
+![clay](log/2021-07_clank-mudstack-9.jpg)
+![clay](log/2021-07_clank-mudstack-10.jpg)
+
+This mug was in collaboration with Amanda Soule `@thedeercat` - she threw the base on a plaster bat w/ engraved and slip-painted detail, the machine extruded the mug walls. It was trimmed by hand and the exterior walls were painted in with a fourth color of slip. 
+
+![clay](log/2021-07_clank-mudstack-11.jpg)
+![clay](log/2021-07_clank-mudstack-12.jpg)
+![clay](log/2021-07_clank-mudstack-13.jpg)
